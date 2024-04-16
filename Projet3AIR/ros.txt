@@ -1,0 +1,59 @@
+Run :
+
+tty1 : 
+mamba activate ros_env
+roscore
+
+tty2 :
+mamba activate ros_env
+rviz
+___________________________________________________
+La procédure d'installation est issu de :
+https://robostack.github.io/GettingStarted.html
+
+
+D'abord installer minforge (pour canda et mamba)
+--> https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
+
+> bash Miniforge3-Linux-x86_64.sh
+
+(1) 
+conda install mamba -c conda-forge
+
+
+(2) 
+conda deactivate
+mamba create -n ros_env
+mamba activate ros_env
+
+(2.1) 
+# this adds the conda-forge channel to the new created environment configuration 
+conda config --env --add channels conda-forge
+# and the robostack channel
+conda config --env --add channels robostack-staging
+# remove the defaults channel just in case, this might return an error if it is not in the list which is ok
+conda config --env --remove channels defaults
+
+
+(3)
+# Install ros-noetic into the environment (ROS1)
+mamba install ros-noetic-desktop
+
+# Install ros-humble into the environment (ROS2)
+mamba install ros-humble-desktop
+
+
+(4) 
+mamba deactivate
+mamba activate ros_env
+
+
+(5) Run le programme
+mamba activate ros_env
+roscore
+
+mamba activate ros_env
+rviz
+
+
+

@@ -1,0 +1,1 @@
+./CarlaUE4.sh -windowed -ResX=160 -ResY=120 -quality-level=Low
