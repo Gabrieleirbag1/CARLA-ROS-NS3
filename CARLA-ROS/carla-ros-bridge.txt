@@ -1,0 +1,70 @@
+**RVIZ :**
+https://github.com/carla-simulator/ros-bridge/blob/master/docs/rviz_plugin.md
+sudo apt install ros-noetic-rosbash
+
+
+**Dépendances rviz :**
+sudo apt install python-pexpect
+sudo apt install ros-noetic-rosbash
+
+_______________________________________________________________
+**Déplace le véhicule**
+rostopic pub /carla/ego_vehicle/vehicle_control_cmd carla_msgs/CarlaEgoVehicleControl "{throttle: 1.0, steer: 1.0}" -r 10
+_______________________________________________________________
+
+**Faire apparaître un objet :**
+
+**Se baser sur un json**
+roslaunch carla_spawn_objects carla_spawn_objects.launch objects_definition_file:=~/Downloads/objects.json
+
+
+**Coordonnées**
+
+**Voiture qui tombe du ciel**
+roslaunch carla_spawn_objects carla_spawn_objects.launch spawn_point_ego_vehicle:=2.347135305404663,0.5000482201576233,63.18171310424805,0.0,0.0,0.0
+
+roslaunch carla_spawn_objects carla_spawn_objects.launch spawn_point_ego_vehicle:=41.32268142700195,-6.234161853790283,3.1291208267211914,0.0,0.0,0.0
+
+roslaunch carla_spawn_objects carla_spawn_objects.launch spawn_point_ego_vehicle:=0.9828559160232544,-57.39075469970703,5.84547758102417,0.0,0.0,0.0
+
+roslaunch carla_spawn_objects carla_spawn_objects.launch spawn_point_ego_vehicle:=-49.41593551635742,-0.5250837802886963,8.051183700561523,0.0,0.0,0.0
+
+
+--> spawn_point_<VEHICLE-NAME>:=x,y,z,roll,pitch,yaw
+
+**Contrôler l'objet :**
+roslaunch carla_manual_control carla_manual_control.launch timeout:=300
+
+rostopic pub /carla/ego_vehicle/enable_autopilot std_msgs/Bool "data: true
+
+_______________________________________________________________
+**Obtenir des infos sur la voiture:**
+rostopic echo /carla/ego_vehicle/vehicle_status
+_______________________________________________________________
+
+**Changer la carte :**
+python3 PythonAPI/util/config.py -m Town03
+_______________________________________________________________
+**Afficher les coos :**
+python3 print_spectactor_coord.py
+
+
+--> Coos utiles Town03 : -81.20181274414062,64.49888610839844,3.4232537746429443
+
+
+**Respawn un véhicule :**
+roslaunch carla_spawn_objects set_initial_pose.launch controller_id:=vehicle.tesla.model3
+vehicle.tesla.model3
+
+
+
+
+_______________________________________________________________
+
+sudo apt install ros-noetic-catkin python3-catkin-tools
+--> catkin build
+
+source devel/setup.bash
+cd /sub_pkg/src && chmod +x * 
+
+
