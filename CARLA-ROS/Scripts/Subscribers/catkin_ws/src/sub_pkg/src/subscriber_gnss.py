@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import rospy
+import rospy, time
 from sensor_msgs.msg import NavSatFix  # Import du type de message pour NavSatFix (GPS)
 
 def callback(data):         # Affiche en direct au travers de terminaux ROS les information dont nous avons besoin
@@ -7,6 +7,7 @@ def callback(data):         # Affiche en direct au travers de terminaux ROS les 
     rospy.loginfo("Latitude: %f", data.latitude)
     rospy.loginfo("Longitude: %f", data.longitude)
     rospy.loginfo("Altitude: %f", data.altitude)
+    time.sleep(1)
 
 def listener():     # Definition de notre subscriber
     rospy.init_node('subscriber_navsatfix', anonymous=True)     # Nom de notre noeud

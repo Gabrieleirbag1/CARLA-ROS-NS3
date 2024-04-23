@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-import rospy
+import rospy, time
 from std_msgs.msg import Int16MultiArray  # Import du type de message pour Int16MultiArray
 
 def callback(data):             # Affiche en direct au travers de terminaux ROS les information dont nous avons besoin
     rospy.loginfo("Received data:")
     rospy.loginfo("Data: %s", str(data.data))
+    time.sleep(1)
 
 def listener():     # Definition de notre subscriber
     rospy.init_node('subscriber_int16_multi_array', anonymous=True)       # Nom de notre noeud
