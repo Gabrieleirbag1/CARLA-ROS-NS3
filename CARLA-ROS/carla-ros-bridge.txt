@@ -35,7 +35,7 @@ roslaunch carla_spawn_objects carla_spawn_objects.launch spawn_point_ego_vehicle
 **Contrôler l'objet :**
 roslaunch carla_manual_control carla_manual_control.launch timeout:=300
 
-rostopic pub /carla/ego_vehicle/enable_autopilot std_msgs/Bool "data: true
+rostopic pub /carla/ego_vehicle/enable_autopilot std_msgs/Bool "data: true"
 
 _______________________________________________________________
 **Obtenir des infos sur la voiture:**
@@ -47,6 +47,7 @@ python3 PythonAPI/util/config.py -m Town03
 _______________________________________________________________
 **Afficher les coos :**
 python3 print_spectactor_coord.py
+https://gist.github.com/damascenodiego/c53ae6960f1ebdcc25d41384392b6500
 
 
 --> Coos utiles Town03 : -81.20181274414062,64.49888610839844,3.4232537746429443
@@ -70,3 +71,7 @@ cd /sub_pkg/src && chmod +x *
 setfacl -d -m u::rwx,g::rwx,o::rx ../../Utils/
 
 https://www.youtube.com/watch?v=otGWUZqB9XE
+
+
+
+
