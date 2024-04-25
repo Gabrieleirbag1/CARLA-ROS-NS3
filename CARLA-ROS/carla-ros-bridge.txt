@@ -7,6 +7,20 @@ sudo apt install ros-noetic-rosbash
 sudo apt install python-pexpect
 sudo apt install ros-noetic-rosbash
 
+
+
+# build CARLA ScenarioRunner
+RUN cd /home/$USERNAME && \
+    git clone https://github.com/carla-simulator/scenario_runner.git -b v${CARLA_VERSION} && \
+    sudo pip install -r scenario_runner/requirements.txt
+
+RUN sudo python -m easy_install /opt/carla-simulator/PythonAPI/carla/dist/carla-${CARLA_VERSION}-py2.7-linux-x86_64.egg
+RUN echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc && \
+    echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc && \
+    echo "export SCENARIO_RUNNER_PATH=/home/$USERNAME/scenario_runner" >> ~/.bashrc && \
+    echo "export PYTHONPATH=\${PYTHONPATH}:/opt/carla-simulator/PythonAPI/carla" >> ~/.bashrc
+    
+
 _______________________________________________________________
 **Déplace le véhicule**
 rostopic pub /carla/ego_vehicle/vehicle_control_cmd carla_msgs/CarlaEgoVehicleControl "{throttle: 1.0, steer: 1.0}" -r 10
@@ -73,5 +87,4 @@ setfacl -d -m u::rwx,g::rwx,o::rx ../../Utils/
 https://www.youtube.com/watch?v=otGWUZqB9XE
 
 
-
-
+______________________________________________
