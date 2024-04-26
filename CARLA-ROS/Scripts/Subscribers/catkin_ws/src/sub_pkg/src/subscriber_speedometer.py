@@ -2,7 +2,7 @@
 import rospy, time
 from std_msgs.msg import Float32  # Import du type de message pour Float32
 
-def callback(data):             # Affiche en direct au travers de terminaux ROS les information dont nous avons besoin
+def callback(data):             # Affiche en direct au travers de terminaux ROS les informations dont nous avons besoin
     rospy.loginfo("Received data: %f", data.data)
     time.sleep(1)
 

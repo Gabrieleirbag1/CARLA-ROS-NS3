@@ -23,10 +23,11 @@ mkdir -p "$destination_dir"
 echo "Liste des fichiers python dans le répertoire '$source_dir':"
 files=($(find "$source_dir" -type f -name "*.py"))
 for i in "${!files[@]}"; do
-    echo "$((i+1)) ${files[$i]}"
+    echo -e "\e[1m$((i+1)) ${files[$i]}\e[0m"
 done
 
 # Demander à l'utilisateur de choisir un fichier à copier
+echo ""
 read -p "Entrez le numéro du fichier à copier (ou '*' pour copier tous les fichiers) : " choice
 
 # Vérifier le choix de l'utilisateur
@@ -42,5 +43,11 @@ else
     echo "Choix invalide."
     exit 1
 fi
+
+# Donner les permissions d'exécution aux fichiers copiés
+cd ~/Documents/CARLA-ROS/Scripts/catkin_ws/src/sub_pkg/src && chmod +x *.py
+
+# Build après modification
+cd ~/Documents/CARLA-ROS/Scripts/catkin_ws && catkin build
 
 echo "Copie terminée."
