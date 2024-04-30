@@ -4,7 +4,7 @@
 mkdir -p ~/Documents/CARLA-ROS/Scripts/catkin_ws/src
 
 # Installation des dépendances nécessaires
-sudo apt install ros-noetic-catkin python3-catkin-tools
+sudo apt install ros-noetic-catkin python3-catkin-tools ros-noetic-rosbash
 
 # Création du premier package
 cd ~/Documents/CARLA-ROS/Scripts/catkin_ws && catkin build
