@@ -5,8 +5,6 @@
 ./waf configure --enable-static --disable-examples --disable-tests
 ./waf configure --enable-examples --enable-tests
 
-export LD_LIBRARY_PATH="~/ns-allinone-3.xx/ns.3.xx/build/lib/"
-
 Prendre un fichier exemple dans ns-3.xx/examples/tutorial/
 copier dans ns-3.xx/build/scratch
 
@@ -33,5 +31,17 @@ Examples are at src/netanim/examples
 
 
  ouvrir dans netanim le fichier xml dans /home/gab/ns-allinone-3.30.1/ns-3.30.1/
+
+
+
+ _________________________
+ **Paths:**
+
+ export LD_LIBRARY_PATH="~/ns-allinone-3.30.1/ns.3.30.1/build/lib/"
+
+ export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:~/ns-allinone-3.30.1/ns-3.30.1/build/
+
+ export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:/opt/ros/noetic/include/
+ export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:/home/gab/ns3-ros-bridge/catkin_ws/devel/include/
 
 

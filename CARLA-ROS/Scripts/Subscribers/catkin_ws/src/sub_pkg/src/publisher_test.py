@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
-import rospy
+import rospy, time
 from std_msgs.msg import String
-import socket, time
 
 def talker():
     pub = rospy.Publisher('chatter', String, queue_size=10)
@@ -12,14 +11,7 @@ def talker():
         rospy.loginfo(hello_str)
         pub.publish(hello_str)
         rate.sleep()
-
-        # Envoyer les données au serveur NS3
-        sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        NS3_SERVER_IP = '127.0.0.1'  # Remplacer par l'adresse IP du serveur NS3
-        NS3_SERVER_PORT = 12345  # Remplacer par le port du serveur NS3
-        sock.sendto(hello_str.encode(), (NS3_SERVER_IP, NS3_SERVER_PORT))
-        time.sleep(2)
-
+        time.sleep(1)
 
 if __name__ == '__main__':
     try:

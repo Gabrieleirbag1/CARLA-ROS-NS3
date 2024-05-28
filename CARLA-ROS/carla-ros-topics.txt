@@ -1,0 +1,103 @@
+Node [/carla_ros_bridge]
+Publications: 
+ * /carla/actor_list [carla_msgs/CarlaActorList]
+ * /carla/ego_vehicle/collision [carla_msgs/CarlaCollisionEvent]
+ * /carla/ego_vehicle/depth_front/camera_info [sensor_msgs/CameraInfo]
+ * /carla/ego_vehicle/depth_front/image [sensor_msgs/Image]
+ * /carla/ego_vehicle/dvs_front/camera_info [sensor_msgs/CameraInfo]
+ * /carla/ego_vehicle/dvs_front/events [sensor_msgs/PointCloud2]
+ * /carla/ego_vehicle/dvs_front/image [sensor_msgs/Image]
+ * /carla/ego_vehicle/gnss [sensor_msgs/NavSatFix]
+ * /carla/ego_vehicle/imu [sensor_msgs/Imu]
+ * /carla/ego_vehicle/lane_invasion [carla_msgs/CarlaLaneInvasionEvent]
+ * /carla/ego_vehicle/lidar [sensor_msgs/PointCloud2]
+ * /carla/ego_vehicle/objects [derived_object_msgs/ObjectArray]
+ * /carla/ego_vehicle/odometry [nav_msgs/Odometry]
+ * /carla/ego_vehicle/radar_front [sensor_msgs/PointCloud2]
+ * /carla/ego_vehicle/rgb_front/camera_info [sensor_msgs/CameraInfo]
+ * /carla/ego_vehicle/rgb_front/image [sensor_msgs/Image]
+ * /carla/ego_vehicle/rgb_view/camera_info [sensor_msgs/CameraInfo]
+ * /carla/ego_vehicle/rgb_view/image [sensor_msgs/Image]
+ * /carla/ego_vehicle/semantic_lidar [sensor_msgs/PointCloud2]
+ * /carla/ego_vehicle/semantic_segmentation_front/camera_info [sensor_msgs/CameraInfo]
+ * /carla/ego_vehicle/semantic_segmentation_front/image [sensor_msgs/Image]
+ * /carla/ego_vehicle/speedometer [std_msgs/Float32]
+ * /carla/ego_vehicle/vehicle_info [carla_msgs/CarlaEgoVehicleInfo]
+ * /carla/ego_vehicle/vehicle_status [carla_msgs/CarlaEgoVehicleStatus]
+ * /carla/map [std_msgs/String]
+ * /carla/markers [visualization_msgs/MarkerArray]
+ * /carla/markers/static [visualization_msgs/MarkerArray]
+ * /carla/objects [derived_object_msgs/ObjectArray]
+ * /carla/status [carla_msgs/CarlaStatus]
+ * /carla/traffic_lights/info [carla_msgs/CarlaTrafficLightInfoList]
+ * /carla/traffic_lights/status [carla_msgs/CarlaTrafficLightStatusList]
+ * /carla/world_info [carla_msgs/CarlaWorldInfo]
+ * /clock [rosgraph_msgs/Clock]
+ * /rosout [rosgraph_msgs/Log]
+ * /tf [tf2_msgs/TFMessage]
+
+Subscriptions: 
+ * /carla/control [unknown type]
+ * /carla/debug_marker [unknown type]
+ * /carla/ego_vehicle/control/set_target_velocity [unknown type]
+ * /carla/ego_vehicle/control/set_transform [unknown type]
+ * /carla/ego_vehicle/enable_autopilot [unknown type]
+ * /carla/ego_vehicle/rgb_view/control/set_target_velocity [unknown type]
+ * /carla/ego_vehicle/rgb_view/control/set_transform [unknown type]
+ * /carla/ego_vehicle/vehicle_control_cmd [unknown type]
+ * /carla/ego_vehicle/vehicle_control_cmd_manual [unknown type]
+ * /carla/ego_vehicle/vehicle_control_manual_override [unknown type]
+ * /carla/weather_control [unknown type]
+ * /clock [rosgraph_msgs/Clock]
+
+Services: 
+ * /carla/destroy_object
+ * /carla/get_blueprints
+ * /carla/spawn_object
+ * /carla_ros_bridge/get_loggers
+ * /carla_ros_bridge/set_logger_level
+
+
+contacting node http://carla-ros-desktop:37703/ ...
+Pid: 14150
+Connections:
+ * topic: /rosout
+    * to: /rosout
+    * direction: outbound (40737 - 127.0.0.1:42930) [9]
+    * transport: TCPROS
+ * topic: /clock
+    * to: /carla_ros_bridge
+    * direction: outbound (40737 - 127.0.0.1:42938) [18]
+    * transport: TCPROS
+ * topic: /clock
+    * to: /rosout
+    * direction: outbound (40737 - 127.0.0.1:42948) [28]
+    * transport: TCPROS
+ * topic: /clock
+    * to: /carla_spawn_objects_carla_ros_desktop_14195_9207620424643950398
+    * direction: outbound (40737 - 127.0.0.1:42960) [25]
+    * transport: TCPROS
+ * topic: /clock
+    * to: /gnss_publisher_14371_1715852359838
+    * direction: outbound (40737 - 127.0.0.1:39660) [64]
+    * transport: TCPROS
+ * topic: /clock
+    * to: /gnss_publisher_23758_1715859022919
+    * direction: outbound (40737 - 127.0.0.1:53690) [81]
+    * transport: TCPROS
+ * topic: /clock
+    * to: /rosns3_client
+    * direction: outbound (40737 - 127.0.0.1:47118) [83]
+    * transport: TCPROS
+ * topic: /carla/ego_vehicle/gnss
+    * to: /gnss_publisher_14371_1715852359838
+    * direction: outbound (40737 - 127.0.0.1:39662) [80]
+    * transport: TCPROS
+ * topic: /carla/ego_vehicle/gnss
+    * to: /gnss_publisher_23758_1715859022919
+    * direction: outbound (40737 - 127.0.0.1:53696) [82]
+    * transport: TCPROS
+ * topic: /clock
+    * to: /carla_ros_bridge (http://carla-ros-desktop:37703/)
+    * direction: inbound
+    * transport: TCPROS

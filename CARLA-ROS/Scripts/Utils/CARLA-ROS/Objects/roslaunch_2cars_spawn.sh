@@ -7,8 +7,8 @@ open_terminal() {
 user=$(whoami)
 open_terminal "cd ~/CARLA_0.9.11 && ./CarlaUE4.sh windowed -opengl -quality-level=Low"
 open_terminal "sleep 5 && roslaunch carla_ros_bridge carla_ros_bridge.launch timeout:=300 town:=Town03"
-open_terminal "sleep 10 && roslaunch carla_spawn_objects carla_spawn_objects.launch objects_definition_file:=/home/$user/Documents/Stage-2024/CARLA-ROS/Configs/falling_car_spawn.json"
-open_terminal "sleep 12 && roslaunch carla_spawn_objects carla_spawn_objects.launch objects_definition_file:=/home/$user/Documents/Stage-2024/CARLA-ROS/Configs/car1_spawn.json"
+open_terminal "sleep 10 && roslaunch carla_spawn_objects carla_spawn_objects.launch objects_definition_file:=/home/$user/Documents/Stage-2024/CARLA-ROS/Configs/car1_spawn.json"
+open_terminal "sleep 12 && roslaunch carla_spawn_objects carla_spawn_objects.launch objects_definition_file:=/home/$user/Documents/Stage-2024/CARLA-ROS/Configs/car2_spawn.json"
 
 cleanup() {
     kill $(ps aux | grep "/home/$user/CARLA_0.9.11/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping CarlaUE4 windowed -opengl -quality-level=Low" | awk 'NR==1{print $2}')
