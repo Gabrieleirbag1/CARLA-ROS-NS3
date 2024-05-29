@@ -4,7 +4,6 @@
 #include "ns3/point-to-point-module.h"
 #include "ns3/applications-module.h"
 #include "ns3/rosns3-module.h"
-#include "ns3/rosbridge-helper.h"
 
 using namespace ns3;
 
@@ -31,7 +30,7 @@ int main (int argc, char *argv[])
 
   Ipv4InterfaceContainer interfaces = address.Assign (devices);
 
-  ns3::rosns3::RosBridgeHelper rosBridge;
+  RosBridgeHelper rosBridge;
   rosBridge.SetAttribute ("Local", AddressValue (InetSocketAddress (Ipv4Address::GetAny (), 9)));
   rosBridge.SetAttribute ("Topic", StringValue ("/car_control"));
   rosBridge.SetAttribute ("ns3::PacketSocket::RecvBufSize", UintegerValue (20));

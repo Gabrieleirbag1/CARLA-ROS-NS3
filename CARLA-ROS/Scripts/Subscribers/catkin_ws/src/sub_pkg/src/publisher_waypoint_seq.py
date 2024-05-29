@@ -48,21 +48,18 @@ class GNSS():
         # Envoyer les données au serveur NS3
         self.sock.sendto(f"COORDINATES|{vehicle_index}|{odo_data.pose.pose.position.x}|{odo_data.pose.pose.position.y}|{odo_data.pose.pose.position.z}|".encode(), (self.NS3_SERVER_IP, self.NS3_SERVER_PORT))
 
-    def callback(self, data, vehicle_index):         
+    def callback(self, data):         
         print("=============================\nReceived Odometry data:")
         for attr in ['x', 'y', 'z']:
             rospy.loginfo("Position: %f", getattr(data.pose.pose.position, attr))
-        # for attr in ['x', 'y', 'z']:
-        #     rospy.loginfo("Velocity: %f", getattr(data.twist.twist.linear, attr))
-        # for attr in ['x', 'y', 'z']:
-        #     rospy.loginfo("Acceleration: %f", getattr(data.twist.twist.angular, attr))
-
+        # Calculate vehicle index based on sequence number
+        vehicle_index = data.header.seq % self.num_vehicles
+        print(f"Vehicle index: {vehicle_index}")
         self.publisher_odo(data, vehicle_index)
 
     def listener(self, pub, rate):     # Definition de notre subscriber
         rospy.init_node('odo_publisher', anonymous=True)
-        for i in range(self.num_vehicles):
-            rospy.Subscriber(f"/carla/vehicle_{i+1}/odometry", Odometry, lambda data, vehicle_index=i: self.callback(data, vehicle_index))
+        rospy.Subscriber(f"/carla/ego_vehicle/odometry", Odometry, self.callback)
         rospy.spin()   # Permet au programme d'être en route continuellement
     
     def initisalisation(self):
