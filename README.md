@@ -31,6 +31,6 @@ Pour mettre en place ce projet, suivez les instructions détaillées des documen
 [![Netanim 2 Nodes](https://github.com/Gabrieleirbag1/CARLA-ROS-NS3/blob/main/CARLA-ROS/Medias/Netanim.jpg?raw=true)](https://youtu.be/kYeH5b_MS20)
 
 ### Schémas
-![CARLA ROS BRIDGE](https://github.com/Gabrieleirbag1/CARLA-ROS-NS3/blob/main/CARLA-ROS/Medias/Sch%C3%A9ma%20CARLA-ROS-Bridge%20transparent.drawio.png?raw=true)
+![CARLA ROS BRIDGE](https://github.com/Gabrieleirbag1/CARLA-ROS-NS3/blob/main/CARLA-ROS/Medias/Sch%C3%A9ma%20CARLA-ROS-Bridge.drawio.png?raw=true)
 
-![ROS](https://github.com/Gabrieleirbag1/CARLA-ROS-NS3/blob/main/CARLA-ROS/Medias/Sch%C3%A9ma%20CARLA%20Sensors.drawio.png?raw=true)
+![ROS](https://github.com/Gabrieleirbag1/CARLA-ROS-NS3/blob/main/CARLA-ROS/Medias/Sch%C3%A9ma%20CARLA%20Sensors%20light.drawio.png?raw=true)
