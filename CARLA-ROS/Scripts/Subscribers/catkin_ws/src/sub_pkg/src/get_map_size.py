@@ -13,19 +13,14 @@ class Map():
         spawn_points = map.get_spawn_points()
 
         # Get the maximum and minimum x and y coordinates
-        max_x = max(spawn_point.location.x for spawn_point in spawn_points)
-        min_x = min(spawn_point.location.x for spawn_point in spawn_points)
-        max_y = max(spawn_point.location.y for spawn_point in spawn_points)
-        min_y = min(spawn_point.location.y for spawn_point in spawn_points)
+        self.min_x = min(spawn_point.location.x for spawn_point in spawn_points)
+        self.min_y = min(spawn_point.location.y for spawn_point in spawn_points)
+        self.min_z = min(spawn_point.location.z for spawn_point in spawn_points)
 
-        # Calculate the size of the map
-        self.map_width = max_x - min_x
-        self.map_height = max_y - min_y
-
-        return self.map_width, self.map_height
+        return self.min_x, self.min_y, self.min_z
 
     def show_map_size(self):
-        print('Map size: {} x {}'.format(self.map_width, self.map_height))
+        print('Map size: x : {} y: {} z: {}'.format(self.min_x, self.min_y, self.min_z))
 
 if __name__ == '__main__':
     map = Map()

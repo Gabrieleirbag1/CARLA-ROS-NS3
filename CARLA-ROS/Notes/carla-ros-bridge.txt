@@ -24,6 +24,7 @@ RUN echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc && \
 _______________________________________________________________
 **Déplace le véhicule**
 rostopic pub /carla/ego_vehicle/vehicle_control_cmd carla_msgs/CarlaEgoVehicleControl "{throttle: 1.0, steer: 1.0}" -r 10
+rostopic pub /carla/ego_vehicle/vehicle_control_cmd carla_msgs/CarlaEgoVehicleControl "{throttle: 1.0, steer: 0.0}" -r 10
 _______________________________________________________________
 
 **Faire apparaître un objet :**
@@ -88,3 +89,7 @@ https://www.youtube.com/watch?v=otGWUZqB9XE
 
 
 ______________________________________________
+
+comment faire pour que la simulation run en même temps que le programme pour que le fichier xml se remplisse à chaque itération ?
+
+c'est à dire que actuellement le fichier xml se remplie à la fin de la simulation avec les données alors que je veux que ce soit à chaque fois qu'il reçoit une coordonnée que le fichier se mette à jour en ajoutant la ligne du noeud avec ces coordonnées
