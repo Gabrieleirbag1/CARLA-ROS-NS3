@@ -28,7 +28,7 @@ Pour mettre en place ce projet, suivez les instructions détaillées des documen
 ![CARLA Simulation](https://github.com/Gabrieleirbag1/CARLA-ROS-NS3/blob/main/CARLA-ROS/Medias/CARLA%20Autopilot.gif?raw=true)  
 
 ### NS3
-[![Netanim 2 Nodes](https://github.com/Gabrieleirbag1/CARLA-ROS-NS3/blob/main/CARLA-ROS/Medias/Netanim.jpg?raw=true)](https://youtu.be/kYeH5b_MS20)
+[![Netanim 2 Nodes](https://github.com/Gabrieleirbag1/CARLA-ROS-NS3/blob/main/CARLA-ROS/Medias/Netanim.jpg?raw=true)](https://youtu.be/OJwKWWmvIbc)
 
 ### Schémas
 ![CARLA ROS BRIDGE](https://github.com/Gabrieleirbag1/CARLA-ROS-NS3/blob/main/CARLA-ROS/Medias/Sch%C3%A9ma%20CARLA-ROS-Bridge.drawio.png?raw=true)
