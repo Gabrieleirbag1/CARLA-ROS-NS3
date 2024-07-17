@@ -22,20 +22,13 @@ from carla import VehicleLightState as vls
 
 import argparse
 
-# Constant for the display of arrows in the Carla simulation
-ELEVATION = 1.2
-ARROW_SIZE = 0.6
-END_ARROW_SIZE = 1.1
-STEP = 0.15 # temps d'affichage des flèches en sec
-ARROW_COLOR = carla.Color(0, 0, 255)
-
 class DisplayArrow:
     def __init__(self):
         self.ELEVATION = 1.2
         self.ARROW_SIZE = 0.6
         self.END_ARROW_SIZE = 1.1
         self.STEP = 0.15
-        self.ARROW_COLOR = carla.Color(0, 0, 255)
+        self.ARROW_COLOR = carla.Color(255, 0, 0)
 
     def get_vehicles_carla(self, world):
         vehicles = []
@@ -80,9 +73,13 @@ class DisplayArrow:
         client = carla.Client(args.host, args.port)
         world = client.get_world()
         helper_debug = world.debug
-
+        
         spectator = world.get_spectator()
-        pov = carla.Transform(carla.Location(x=-40, y=0, z=190), carla.Rotation(yaw=180, pitch=-90))
+        # Positionnement de la caméra pour la mobilité aléatoire (dézoom max)
+        pov = carla.Transform(carla.Location(x=40, y=0, z=320), carla.Rotation(yaw=180, pitch=-90))
+        # Positionnement de la caméra pour la mobilité fixe (focus sur le haut de la scène)
+        # pov = carla.Transform(carla.Location(x=-40, y=0, z=190), carla.Rotation(yaw=180, pitch=-90))
+        spectator.set_transform(pov)
 
         vehicles = self.get_vehicles_carla(world)
         if len(vehicles) == 0:
