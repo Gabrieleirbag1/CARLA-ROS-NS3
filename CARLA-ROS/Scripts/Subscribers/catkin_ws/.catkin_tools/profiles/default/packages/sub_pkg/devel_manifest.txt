@@ -1,5 +1,0 @@
-sub_pkg
-/home/gab/Documents/Stage-2024/CARLA-ROS/Scripts/Subscribers/catkin_ws/devel/.private/sub_pkg/cmake.lock /home/gab/Documents/Stage-2024/CARLA-ROS/Scripts/Subscribers/catkin_ws/devel/./cmake.lock
-/home/gab/Documents/Stage-2024/CARLA-ROS/Scripts/Subscribers/catkin_ws/devel/.private/sub_pkg/lib/pkgconfig/sub_pkg.pc /home/gab/Documents/Stage-2024/CARLA-ROS/Scripts/Subscribers/catkin_ws/devel/lib/pkgconfig/sub_pkg.pc
-/home/gab/Documents/Stage-2024/CARLA-ROS/Scripts/Subscribers/catkin_ws/devel/.private/sub_pkg/share/sub_pkg/cmake/sub_pkgConfig.cmake /home/gab/Documents/Stage-2024/CARLA-ROS/Scripts/Subscribers/catkin_ws/devel/share/sub_pkg/cmake/sub_pkgConfig.cmake
-/home/gab/Documents/Stage-2024/CARLA-ROS/Scripts/Subscribers/catkin_ws/devel/.private/sub_pkg/share/sub_pkg/cmake/sub_pkgConfig-version.cmake /home/gab/Documents/Stage-2024/CARLA-ROS/Scripts/Subscribers/catkin_ws/devel/share/sub_pkg/cmake/sub_pkgConfig-version.cmake

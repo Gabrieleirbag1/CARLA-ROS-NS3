@@ -1,1 +1,0 @@
-/home/gab/Documents/Stage-2024/CARLA-ROS/Scripts/Subscribers/catkin_ws/devel/.private/catkin_tools_prebuild/setup.sh

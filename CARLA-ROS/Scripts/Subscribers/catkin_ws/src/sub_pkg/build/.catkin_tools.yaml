@@ -1,6 +1,0 @@
-devel_space: /home/gab/Documents/Stage-2024/CARLA-ROS/Scripts/Subscribers/catkin_ws/src/sub_pkg/devel
-install: false
-install_space: /home/gab/Documents/Stage-2024/CARLA-ROS/Scripts/Subscribers/catkin_ws/src/sub_pkg/install
-profile: default
-source_space: /home/gab/Documents/Stage-2024/CARLA-ROS/Scripts/Subscribers/catkin_ws/src/sub_pkg/src
-workspace: /home/gab/Documents/Stage-2024/CARLA-ROS/Scripts/Subscribers/catkin_ws/src/sub_pkg

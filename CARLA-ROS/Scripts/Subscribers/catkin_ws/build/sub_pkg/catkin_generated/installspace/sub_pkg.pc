@@ -1,8 +1,0 @@
-prefix=/home/gab/Documents/Stage-2024/CARLA-ROS/Scripts/Subscribers/catkin_ws/install
-
-Name: sub_pkg
-Description: Description of sub_pkg
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
