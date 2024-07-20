@@ -30,7 +30,7 @@ Pour mettre en place ce projet, suivez les instructions détaillées des documen
 
 ![Simulation from CARLA](https://github.com/Gabrieleirbag1/CARLA-ROS-NS3/blob/main/CARLA-ROS/Medias/CARLA%20Autopilot.gif?raw=true)
 
-### NS3 & Netanim
+### NS3 & Netanim (Vidéos)
 [![CARLA-ROS & NS3 Netanim - Waypoint Mobilty Model 2 Nodes ](https://github.com/Gabrieleirbag1/CARLA-ROS-NS3/blob/main/CARLA-ROS/Medias/NS3%20Netanim.png?raw=true)](https://youtu.be/OJwKWWmvIbc)
 
 [![CARLA Simulator & NS3 - Adhoc Wi fi Network 4 Nodes Broadcast](https://github.com/Gabrieleirbag1/CARLA-ROS-NS3/blob/main/CARLA-ROS/Medias/NS3%20Broadcast.png?raw=true)](https://youtu.be/1ZguOScXNjs)
@@ -45,3 +45,6 @@ Pour mettre en place ce projet, suivez les instructions détaillées des documen
 ![ROS](https://github.com/Gabrieleirbag1/CARLA-ROS-NS3/blob/main/CARLA-ROS/Medias/Sch%C3%A9ma%20CARLA%20Sensors%20light.drawio.png?raw=true)
 
 ![NS3 Wi-Fi & ROS](https://github.com/Gabrieleirbag1/CARLA-ROS-NS3/blob/main/CARLA-ROS/Medias/Sch%C3%A9ma%20NS3%20WI-FI%20avec%20ROS%20%26%20CARLA.drawio.png)
+
+## Author
+- [@Missclick](https://www.github.com/Gabrieleirbag1) (Developer) - E-mail : gabrielgarrone670@gmail.com
