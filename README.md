@@ -1,9 +1,10 @@
 
   # CARLA ROS NS3
 
-  Durant mon stage en 2024, j'ai travaillé sur une solution pour relier CARLA à NS3, via ROS. 
+  Durant mon stage en 2024, j'ai travaillé sur une solution pour relier CARLA Simulator à NS3, via ROS. 
   
-  Pour ce faire j'ai utilisé le [CARLA-ROS Bridge](https://github.com/carla-simulator/ros-bridge?tab=readme-ov-file) sur Ubuntu 20.04, puis j'ai relié ROS et NS3 via le module [rosns3](https://github.com/malintha/rosns3_server/tree/master) qui me permet de communiquer par des sockets UDP entre ROS et NS3.
+  Pour ce faire j'ai utilisé le [CARLA-ROS Bridge](https://github.com/carla-simulator/ros-bridge?tab=readme-ov-file) sur Ubuntu 20.04, puis j'ai relié ROS et NS3 via le module [rosns3](https://github.com/malintha/rosns3_server/tree/master) qui me permet de communiquer par des sockets UDP entre ROS et NS3. Enfin j'ai mis en place des échanges réseaux entre les noeuds dans NS3 qui correspondants aux véhicules dans CARLA Simulator, et j'ai ajouté l'affichage de ces échanges directement dans CARLA Simulator.
+  
 ## Documentation d'utilisation  
 
 ⚠️ **L'utilisation de Ubuntu 20.04 est vivement recommandée.**
